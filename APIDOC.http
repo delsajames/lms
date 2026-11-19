@@ -1,0 +1,23 @@
+#api call for user registration
+###
+POST http://127.0.0.1:8000/accounts/register/
+Content-Type: application/json
+
+{
+    "username":"delsa",
+    "email":"delsajames@gmail.com",
+    "password":"delsa@123",
+    "phone":"7034567889",
+    "role":"faculty"
+}
+
+#api call for token
+###
+POST http://127.0.0.1:8000/accounts/token/
+Content-Type: application/json
+
+{
+    "username":"delsa",
+    "password":"delsa@123"
+}
+

@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.authtoken.views import ObtainAuthToken
+from accounts.views import UserCreateView,FacultyRetrieveUpdateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/token/",ObtainAuthToken.as_view()),
+    path("accounts/register/",UserCreateView.as_view()),
+    path("trainer/<int:pk>/",FacultyRetrieveUpdateView.as_view()), 
 ]
